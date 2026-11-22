@@ -1,6 +1,10 @@
 # News data for Sunday 22 November 2026 — every story happened, or was
-# first reported, on that day. Sources verified from Reuters, AP, AFP,
-# UKMTO, BBC, Guardian and Sunday round-ups on 22 Nov 2026.
+# first reported, on that day. Revised in this session after a full date
+# audit: v1 carried ~30 stories from 19-21 Nov (El Chapo capture, Bahrain
+# strike, Maluku quake, Basra fire, Peru quake, Ebola, Manipur, Geneva
+# robots, FinCEN, Fed, SoftBank, Saturday sport) — all replaced below
+# with stories verified as Sunday 22 Nov 2026 (UTC) from Reuters, AP,
+# BBC, Al Jazeera, NYT, Guardian, Cricbuzz, CoinGecko and UKMTO.
 # Written by hand in this session; no file was copied in.
 
 DAY_TITLE = "Sunday 22 November 2026"
@@ -9,30 +13,30 @@ KICKER_RIGHT = "50 STORIES \u00b7 8 REGIONS \u00b7 EVERY ONE DATED SUNDAY 22 NOV
 
 SUBHEAD = [
     "COP31 draft drops fossil fuels",
-    "Tanker burns at anchor off Khasab",
-    "Mexico captures \u2018El Chapo Isidro\u2019",
-    "M7.2 quake hits Maluku",
+    "Tanker burns off Khasab",
+    "Verstappen wins Las Vegas GP",
+    "Smith\u2019s 30th ton passes Bradman",
 ]
 
 # (big number, small label)
 STATS = [
     ("3", "tankers hit off Khasab in ~15 hours"),
-    ("0", "mentions of \u2018fossil fuels\u2019 in COP31\u2019s final draft"),
-    ("11", "killed in Mexico raid that netted \u2018El Chapo Isidro\u2019"),
-    ("7.2", "magnitude of the Maluku quake, 125 km deep"),
-    ("$60,200", "Bitcoin, back above $60k after $55,300 dip"),
-    ("2\u20132", "Arsenal held at Newcastle; City draw 1\u20131"),
+    ("0", "mentions of \u2018fossil fuels\u2019 in COP31\u2019s Sunday draft"),
+    ("30", "Test hundreds for Smith, passing Bradman"),
+    ("$58,737", "Bitcoin, up 5.3% in 24 hours"),
+    ("2", "days into overtime as COP31 hunts a deal"),
+    ("3rd", "Las Vegas Grand Prix win for Verstappen"),
 ]
 
 # (name, count, colour)
 REGIONS = [
-    ("EUROPE", 9, "#2456A6"),
+    ("EUROPE", 7, "#2456A6"),
     ("ASIA-PACIFIC", 7, "#B31B1B"),
-    ("MIDDLE EAST", 5, "#B58900"),
+    ("MIDDLE EAST", 6, "#B58900"),
     ("AMERICAS", 4, "#2E7D32"),
-    ("AFRICA", 11, "#6A1B9A"),
-    ("MARKETS", 5, "#00838F"),
-    ("SPORT & CULTURE", 7, "#C75B12"),
+    ("AFRICA", 4, "#6A1B9A"),
+    ("MARKETS", 7, "#00838F"),
+    ("SPORT & CULTURE", 13, "#C75B12"),
     ("SCIENCE & HEALTH", 2, "#455A64"),
 ]
 
@@ -53,20 +57,20 @@ LEADS = [
         "tag": "HORMUZ: TANKER WAR",
         "place": "KHASAB, OMAN",
         "beat": "SECURITY",
-        "headline": "Third tanker burns at anchor as strait attacks mount",
-        "dek": "TORKEL is ablaze off Khasab after two tankers were hit in an hour "
-               "on Saturday \u2014 three vessels in 15 hours, no deaths. (UKMTO, Reuters)",
+        "headline": "Tanker burns at anchor as strait attacks mount",
+        "dek": "TORKEL burns at anchor off Khasab, a Sunday warning says; two "
+               "tankers were hit on Saturday. (UKMTO)",
         "ill": "hormuz",
     },
     {
         "n": 3,
-        "tag": "BAHRAIN: ATTACK",
-        "place": "MANAMA, BAHRAIN",
-        "beat": "SECURITY",
-        "headline": "Bahrain says Iranian attack set industrial site ablaze",
-        "dek": "Air defences intercepted other incoming fire late on Saturday; "
-               "Tehran says it hit US bases. No injuries reported. (Reuters)",
-        "ill": "bahrain",
+        "tag": "F1: LAS VEGAS",
+        "place": "LAS VEGAS",
+        "beat": "SPORT",
+        "headline": "Verstappen wins Las Vegas Grand Prix",
+        "dek": "Third win on the Strip from pole; Antonelli second, Piastri third. "
+               "(Reports)",
+        "ill": "vegas",
     },
 ]
 
@@ -74,57 +78,58 @@ LEADS = [
 GRID = [
     {
         "n": 4,
-        "tag": "MEXICO: CARTEL",
-        "place": "GUASAVE",
-        "beat": "CRIME",
-        "headline": "\u2018El Chapo Isidro\u2019 captured, 11 killed in raid",
-        "dek": "FBI most-wanted boss Fausto Isidro Meza Flores seized. (Reuters, AP)",
-        "ill": "mexico",
+        "tag": "SOUTH AFRICA: MOURNING",
+        "place": "JOHANNESBURG",
+        "beat": "POLITICS",
+        "headline": "South Africa mourns Mlambo-Ngcuka",
+        "dek": "Flags half-mast; prayer service for the ex-deputy president, 71.",
+        "ill": "mourning",
     },
     {
         "n": 5,
-        "tag": "IRAQ: FIRE",
-        "place": "BASRA",
-        "beat": "DISASTER",
-        "headline": "Power station fire kills 4, injures 35",
-        "dek": "Blaze at the Hartha plant; PM orders a probe. (State media)",
-        "ill": "iraq",
+        "tag": "US: IRAN FEARS",
+        "place": "WASHINGTON",
+        "beat": "POLITICS",
+        "headline": "Treasury chief still on military base",
+        "dek": "Bessent still lives on a military base over Iran fears. (Al Jazeera)",
+        "ill": "bessent",
     },
     {
         "n": 6,
-        "tag": "PERU: QUAKE",
-        "place": "JUN\u00cdN",
-        "beat": "DISASTER",
-        "headline": "M6.8 quake shakes Andes, 15 injured",
-        "dek": "Strong tremor hits the Jun\u00edn region; no deaths. (Reports)",
-        "ill": "peru",
+        "tag": "SUDAN: DARFUR",
+        "place": "DARFUR",
+        "beat": "CRISIS",
+        "headline": "Darfur families face harsh winter",
+        "dek": "Winter nears as aid cuts bite; crisis set to worsen. (Al Jazeera)",
+        "ill": "darfur",
     },
     {
         "n": 7,
-        "tag": "INDONESIA: QUAKE",
-        "place": "MALUKU",
-        "beat": "DISASTER",
-        "headline": "M7.2 quake strikes deep under Maluku",
-        "dek": "125 km deep, no tsunami threat, no damage. (Reports)",
-        "ill": "maluku",
+        "tag": "GAZA: PROTEST",
+        "place": "GAZA CITY",
+        "beat": "CONFLICT",
+        "headline": "Displaced Gazans protest as strikes go on",
+        "dek": "Protest as Israeli forces keep destroying homes, a mayor says. "
+               "(Al Jazeera)",
+        "ill": "gaza",
     },
     {
         "n": 8,
-        "tag": "EBOLA: DRC",
-        "place": "NAIROBI \u00b7 KINSHASA",
-        "beat": "HEALTH",
-        "headline": "Kenya clears its last Ebola patient",
-        "dek": "DRC death toll passes 5,300 as Kenya discharges its final case.",
-        "ill": "ebola",
+        "tag": "NIGERIA: YOUTH",
+        "place": "ABUJA",
+        "beat": "POLITICS",
+        "headline": "Nigeria\u2019s youth shun the ballot box",
+        "dek": "Fewer young Nigerians registered to vote than in 2023. (BBC)",
+        "ill": "nigeria",
     },
     {
         "n": 9,
-        "tag": "INDIA: POISONING",
-        "place": "MANIPUR",
-        "beat": "HEALTH",
-        "headline": "Toxic alcohol kills 11, 180 in hospital",
-        "dek": "Chief minister confirms toll after illicit liquor poisoning.",
-        "ill": "manipur",
+        "tag": "TAIWAN: COMEDY",
+        "place": "TAIPEI",
+        "beat": "CULTURE",
+        "headline": "Comic who mocks Xi draws sellout crowds",
+        "dek": "Huang Yi-hao survived a car crash meant to silence him. (NYT)",
+        "ill": "taiwan",
     },
     {
         "n": 10,
@@ -146,12 +151,13 @@ GRID = [
     },
     {
         "n": 12,
-        "tag": "UN: ROBOTS",
-        "place": "GENEVA",
+        "tag": "UKRAINE: NATO",
+        "place": "KYIV",
         "beat": "DIPLOMACY",
-        "headline": "No treaty to ban \u2018killer robots\u2019",
-        "dek": "UN talks end with no binding deal; work runs to 2028. (Reports)",
-        "ill": "geneva",
+        "headline": "Zelenskyy wants NATO pledges in writing",
+        "dek": "President demands documented security guarantees as talks grind on. "
+               "(Reports)",
+        "ill": "zelenskyy",
     },
     {
         "n": 13,
@@ -159,95 +165,96 @@ GRID = [
         "place": "TURIN",
         "beat": "SPORT",
         "headline": "Alcaraz meets Zverev in final",
-        "dek": "Alcaraz fights back past Shelton; world No. 1 awaits. (Reports)",
+        "dek": "Singles final 18:00 CET; doubles final at 15:00 CET. (Reports)",
         "ill": "atp",
     },
 ]
 
 # 37 more stories, one line each: (n, place, text).
 ALSO = [
-    (14, "TOKYO", "Bitcoin back above $60,000 after $55,300 dip"),
-    (15, "WASHINGTON", "FinCEN calls MEXC a laundering concern"),
-    (16, "WASHINGTON", "Fed Dec hike now near-certain"),
-    (17, "SEOUL", "SoftBank\u2019s Son weighed ~$1tn SK Hynix buyout"),
-    (18, "MADRID", "Spain extends bank levy to fund \u20ac1.4bn housing"),
-    (19, "OSLO", "Top court voids disputed oil licences"),
-    (20, "LONDON", "Arsenal held 2-2 at Newcastle; City draw 1-1"),
-    (21, "LONDON", "Leeds stun Chelsea 4-1; Bournemouth up to 4th"),
-    (22, "PARIS", "France beat Argentina, reach final v South Africa"),
-    (23, "CARDIFF", "Australia beat Wales in Nations Championship"),
-    (24, "SYDNEY", "Smith out as Australia bowl first v South Africa"),
-    (25, "KYIV", "Zelenskyy: US floated NATO-for-land deal; Russia no"),
-    (26, "WARSAW", "NATO jets scramble as Russian arms land"),
-    (27, "GAZA CITY", "Strike kills 3 in food vehicle; Israel: militants"),
-    (28, "DOHA", "Qatar sends delegation to Tehran as tensions rise"),
-    (29, "DHAKA", "90 guard platoons sent to curb arson amid clashes"),
-    (30, "ABUJA", "Gunmen kill village chief and 4 in Niger State"),
-    (31, "MOGADISHU", "Al-Shabaab claims mass ambush toll"),
-    (32, "ADDIS ABABA", "New Tigray mayor vows vote in 6 months"),
-    (33, "ACCRA", "Ghana unveils \u2018Heritage Series\u2019 banknotes"),
-    (34, "NIAMEY", "Sahel states restart dialogue with West Africa"),
-    (35, "S\u00c3O TOM\u00c9", "Am\u00e9rico Ramos reappointed prime minister"),
-    (36, "LISBON", "Thousands march over living costs"),
-    (37, "FLORIDA", "St. Johns River breaks 73-year flood record"),
-    (38, "SINGAPORE", "AI-agent checks, stablecoin sandbox eyed"),
-    (39, "MOUNTAIN VIEW", "Google folds Duplex into Gemini Tasks"),
-    (40, "SEATTLE", "AWS launches KV-cache skill for self-hosted AI"),
-    (41, "NEW YORK", "SBF gives 82-min prison interview to teen"),
-    (42, "TOKYO", "Binance founder CZ talks AI in Japan interview"),
-    (43, "LAGOS", "Nigeria starts building its own naval ships"),
-    (44, "NAIROBI", "Kenya secures 293,600 jobs in Saudi Arabia"),
-    (45, "JOHANNESBURG", "Court protest as police bar rallies"),
-    (46, "LONDON", "Blair: rejoin EU only if UK innovates on tech"),
-    (47, "WASHINGTON", "Hegseth memo \u2018limits\u2019 US-Canada ties"),
-    (48, "LOS ANGELES", "Tyla, Tems, Kidjo lead Grammy hopes"),
-    (49, "KINSHASA", "Tshisekedi enacts constitutional reform law"),
-    (50, "ROME", "Malen scores four as Roma rout Parma"),
+    (14, "TOKYO", "Bitcoin $58,737, up 5.3% in 24 hours"),
+    (15, "NEW YORK", "Ethereum $1,647, up 5.6% in 24 hours"),
+    (16, "SINGAPORE", "BNB $537, up 4.9% in 24 hours"),
+    (17, "NEW YORK", "Solana $68.72, up 5.1% in 24 hours"),
+    (18, "LONDON", "XRP $0.91, up 4.6% in 24 hours"),
+    (19, "NEW YORK", "Dogecoin $0.054, up 4.3% in 24 hours"),
+    (20, "TOKYO", "Bitcoin opened Sunday above $60,000"),
+    (21, "ANTALYA", "Kurum tables last-minute COP31 proposal"),
+    (22, "ANTALYA", "COP31 enters second day of overtime"),
+    (23, "KHASAB", "TORKEL ablaze at anchor, 26.39N 56.31E"),
+    (24, "RIYADH", "Arab states condemn Iran\u2019s Bahrain strikes"),
+    (25, "TEHRAN", "Araqchi says Iran wants diplomacy to end war"),
+    (26, "WASHINGTON", "Trump calls Iran\u2019s terms intolerable"),
+    (27, "GAZA CITY", "Winter weather deepens Gaza\u2019s crisis"),
+    (28, "HONG KONG", "5,700 voters elect Election Committee"),
+    (29, "BEIJING", "China spies targeted AI chips, NYT reports"),
+    (30, "DHAKA", "Deadly protests erupt over exiled Hasina"),
+    (31, "DHAKA", "90 guard platoons sent to curb arson"),
+    (32, "SYDNEY", "Smith\u2019s 30th Test ton passes Bradman"),
+    (33, "SYDNEY", "Khawaja 172 not out as Australia pile on"),
+    (34, "SYDNEY", "Australia 394-3 at tea on day two at SCG"),
+    (35, "LAS VEGAS", "Hadjar sets fastest lap in Las Vegas"),
+    (36, "LAS VEGAS", "Antonelli second, Piastri third in Vegas"),
+    (37, "TURIN", "ATP doubles final at 15:00 CET"),
+    (38, "BRIGHTON", "Brighton play on Sunday, chasing Arsenal"),
+    (39, "JOHANNESBURG", "Mlambo-Ngcuka funeral on 28 Nov"),
+    (40, "ONLINE", "Teen gamer helps FBI rescue kidnapped girl"),
+    (41, "SEATTLE", "State suspends gun background-check system"),
+    (42, "LONDON", "Real people find their work cloned by AI"),
+    (43, "LONDON", "Parents urged to spot online stalking signs"),
+    (44, "LONDON", "Coughlan drama will leave viewers uneasy"),
+    (45, "LONDON", "BBC apologises for Strictly noise disruption"),
+    (46, "NEW YORK", "Mahjong rivalry stirs cultural row"),
+    (47, "LONDON", "Sunday papers hail Catherine\u2019s cancer film"),
+    (48, "LONDON", "Service stations become destinations"),
+    (49, "LONDON", "Employers urged to give interview feedback"),
+    (50, "SOFIA", "Romanian driver set for release after pile-up"),
 ]
 
 WHY_TITLE = "WHY THE STRAIT IS BURNING"
 WHY = [
     "War at sea since late February, when the US and Israel attacked Iran",
-    "A 130-day US naval blockade squeezes Iran\u2019s oil exports",
-    "Iran masses 14+ tankers at Kharg Island to break the blockade",
-    "Attacks at their highest since the war began: 31 in Oct, ~19 in Nov",
+    "Three tankers hit off Khasab in 15 hours",
+    "Houthi strikes keep Saudi Arabia on edge",
+    "Bahrain says Iranian fire hit an industrial site",
     "About 1 in 5 barrels of the world\u2019s oil passes through the strait",
 ]
 
 DATECHECK_TITLE = "DATE CHECK \u2014 WHAT WE LEFT OUT"
 DATECHECK = [
-    "Russia\u2019s largest strike of the year on Ukraine \u2014 Saturday 21 Nov.",
-    "Houthi missiles fired at Riyadh, three intercepted \u2014 Saturday 21 Nov.",
-    "Sparta II cargo ship hit by drones in the Baltic \u2014 Saturday 21 Nov.",
+    "\u2018El Chapo Isidro\u2019 captured in Mexico \u2014 Saturday 21 Nov.",
+    "Bahrain says Iranian attack hit industrial site \u2014 Saturday 21 Nov.",
+    "M7.2 Maluku quake (later revised to 6.9) \u2014 Saturday 21 Nov.",
     "EU and Indonesia sign trade deal in Brussels \u2014 Saturday 21 Nov.",
+    "Sparta II cargo ship hit by drones in the Baltic \u2014 Saturday 21 Nov.",
     "Nigeria funeral-boat toll reaches 24 \u2014 Saturday 21 Nov.",
-    "Nvidia \u221214% on SEC accounting-probe report \u2014 Friday 20 Nov.",
     "S&P 500 enters correction, down 3.7% \u2014 Friday 20 Nov.",
-    "Shenzhen three-leader declaration issued \u2014 Thursday 19 Nov.",
+    "Nvidia \u221214% on SEC accounting-probe report \u2014 Friday 20 Nov.",
 ]
 
 # Map pins: (label, longitude, latitude).
 PINS = [
     ("ANTALYA", 30.7, 36.9),
     ("KHASAB", 56.2, 26.2),
-    ("MANAMA", 50.6, 26.2),
-    ("GUASAVE", -108.5, 25.6),
-    ("BASRA", 47.8, 30.5),
-    ("JUN\u00cdN", -75.2, -11.2),
-    ("MALUKU", 128.2, -3.7),
-    ("NAIROBI", 36.8, -1.3),
-    ("MANIPUR", 93.9, 24.8),
+    ("LAS VEGAS", -115.1, 36.2),
+    ("JOHANNESBURG", 28.0, -26.2),
+    ("WASHINGTON", -77.0, 38.9),
+    ("DARFUR", 25.4, 13.6),
+    ("GAZA CITY", 34.5, 31.5),
+    ("ABUJA", 7.5, 9.1),
+    ("TAIPEI", 121.6, 25.0),
     ("NAYPYIDAW", 96.2, 19.7),
     ("SYDNEY", 151.2, -33.9),
-    ("GENEVA", 6.1, 46.2),
+    ("KYIV", 30.5, 50.4),
+    ("TURIN", 7.7, 45.1),
 ]
 
 FOOTER_SOURCES = (
     "Every story here happened, or was first reported, on Sunday 22 November 2026 \u00b7 "
     "Sources named beside each story \u00b7 Drawn illustrations, not photographs"
 )
-FOOTER_MARKETS = "MARKETS (FRI CLOSE): BTC $60,200 \u00b7 S&P 500 6,910.39 \u00b7 OIL ~$93"
+FOOTER_MARKETS = "MARKETS (SUN LIVE): BTC $58,737 \u00b7 ETH $1,647 \u00b7 SOL $68.72"
 FOOTER_TRENDING = (
-    "TRENDING NOW: COP31 \u00b7 HORMUZ \u00b7 EL CHAPO ISIDRO \u00b7 ATP FINALS \u00b7 "
-    "BITCOIN \u00b7 MALUKU QUAKE"
+    "TRENDING NOW: COP31 \u00b7 HORMUZ \u00b7 VERSTAPPEN \u00b7 ATP FINALS \u00b7 "
+    "BITCOIN \u00b7 SMITH"
 )

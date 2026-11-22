@@ -508,6 +508,223 @@ def ill_atp(d, x, y, w, h):
            width=3)
 
 
+def ill_vegas(d, x, y, w, h):
+    d.rectangle([x, y, x + w, y + h], fill=(12, 10, 38))
+    for i in range(12):  # stars
+        sx = x + (i * 41) % w
+        sy = y + (i * 19) % int(h * 0.35)
+        d.ellipse([sx, sy, sx + 2, sy + 2], fill=(255, 255, 220))
+    # Strip skyline with lit windows.
+    heights = [0.40, 0.58, 0.34, 0.66, 0.48, 0.60, 0.38]
+    bw = w / len(heights)
+    for i, hh in enumerate(heights):
+        bx = x + i * bw
+        by = y + h * 0.62 - h * hh * 0.5
+        d.rectangle([bx + 2, by, bx + bw - 2, y + h * 0.62],
+                    fill=(35, 30, 80))
+        for wy in range(3):
+            d.rectangle([bx + 5, by + 6 + wy * 10, bx + 10, by + 11 + wy * 10],
+                        fill=(255, 220, 120))
+    # Neon strip.
+    d.rectangle([x, y + h * 0.62, x + w, y + h * 0.68], fill=(255, 0, 150))
+    d.rectangle([x, y + h * 0.68, x + w, y + h], fill=(30, 30, 30))
+    d.line([x, y + h * 0.86, x + w, y + h * 0.86], fill=(255, 255, 255),
+           width=2)
+    # F1 car, side view.
+    cx, cy = x + w * 0.5, y + h * 0.80
+    d.polygon([(cx - w * 0.34, cy), (cx - w * 0.28, cy - h * 0.10),
+               (cx + w * 0.10, cy - h * 0.12), (cx + w * 0.30, cy - h * 0.04),
+               (cx + w * 0.34, cy)], fill=(200, 30, 30))
+    d.rectangle([cx + w * 0.24, cy - h * 0.22, cx + w * 0.34, cy - h * 0.16],
+                fill=(40, 40, 40))
+    d.rectangle([cx + w * 0.26, cy - h * 0.16, cx + w * 0.28, cy - h * 0.06],
+                fill=(40, 40, 40))
+    for wx in (-0.22, 0.20):
+        px = cx + w * wx
+        d.ellipse([px - 8, cy - 8, px + 8, cy + 8], fill=(15, 15, 15),
+                  outline=(200, 200, 200), width=1)
+        d.ellipse([px - 3, cy - 3, px + 3, cy + 3], fill=(180, 180, 180))
+
+
+def ill_mourning(d, x, y, w, h):
+    d.rectangle([x, y, x + w, y + h], fill=(70, 80, 95))
+    d.rectangle([x, y + h * 0.82, x + w, y + h], fill=(45, 50, 60))
+    # Flagpole.
+    px = x + w * 0.30
+    d.rectangle([px - 2, y + h * 0.06, px + 2, y + h * 0.82], fill=(220, 220, 220))
+    d.ellipse([px - 4, y + h * 0.02, px + 4, y + h * 0.10], fill=(255, 215, 0))
+    # Flag at half-mast: muted green / gold / red bands.
+    fy = y + h * 0.28
+    fh = h * 0.26
+    fw = w * 0.42
+    d.rectangle([px + 2, fy, px + 2 + fw, fy + fh / 3], fill=(0, 120, 70))
+    d.rectangle([px + 2, fy + fh / 3, px + 2 + fw, fy + 2 * fh / 3],
+                fill=(220, 180, 40))
+    d.rectangle([px + 2, fy + 2 * fh / 3, px + 2 + fw, fy + fh],
+                fill=(180, 40, 40))
+    # Black mourning ribbon.
+    d.rectangle([x + w * 0.62, y + h * 0.55, x + w * 0.92, y + h * 0.66],
+                fill=(20, 20, 20))
+    d.polygon([(x + w * 0.92, y + h * 0.55), (x + w * 0.92, y + h * 0.66),
+               (x + w * 0.99, y + h * 0.605)], fill=(20, 20, 20))
+
+
+def ill_bessent(d, x, y, w, h):
+    d.rectangle([x, y, x + w, y + h], fill=(200, 205, 180))
+    d.rectangle([x, y + h * 0.78, x + w, y + h], fill=(120, 120, 95))
+    # Barracks block.
+    d.rectangle([x + w * 0.08, y + h * 0.48, x + w * 0.55, y + h * 0.78],
+                fill=(150, 145, 120), outline=(90, 85, 65), width=2)
+    for i in range(3):
+        wx = x + w * (0.14 + i * 0.13)
+        d.rectangle([wx, y + h * 0.56, wx + 10, y + h * 0.66],
+                    fill=(255, 230, 150))
+    # Watchtower.
+    tx = x + w * 0.74
+    d.line([tx - 12, y + h * 0.78, tx - 6, y + h * 0.30], fill=(90, 85, 65),
+           width=3)
+    d.line([tx + 12, y + h * 0.78, tx + 6, y + h * 0.30], fill=(90, 85, 65),
+           width=3)
+    d.rectangle([tx - 16, y + h * 0.14, tx + 16, y + h * 0.32],
+                fill=(120, 115, 95), outline=(70, 65, 50), width=2)
+    d.rectangle([tx - 11, y + h * 0.19, tx + 11, y + h * 0.27],
+                fill=(180, 220, 240))
+    d.polygon([(tx - 20, y + h * 0.14), (tx + 20, y + h * 0.14),
+               (tx, y + h * 0.04)], fill=(90, 85, 65))
+    # Flag on the barracks.
+    fx = x + w * 0.14
+    d.rectangle([fx, y + h * 0.28, fx + 2, y + h * 0.48], fill=(90, 85, 65))
+    d.rectangle([fx + 2, y + h * 0.28, fx + 22, y + h * 0.40],
+                fill=(180, 40, 40))
+    d.rectangle([fx + 2, y + h * 0.32, fx + 22, y + h * 0.36],
+                fill=(255, 255, 255))
+
+
+def ill_darfur(d, x, y, w, h):
+    d.rectangle([x, y, x + w, y + h], fill=(245, 220, 160))
+    d.ellipse([x + w * 0.72, y + h * 0.08, x + w * 0.72 + 26,
+               y + h * 0.08 + 26], fill=(255, 200, 60))
+    # Dunes.
+    d.ellipse([x - w * 0.2, y + h * 0.55, x + w * 0.7, y + h * 1.05],
+              fill=(225, 185, 110))
+    d.ellipse([x + w * 0.4, y + h * 0.62, x + w * 1.2, y + h * 1.05],
+              fill=(210, 170, 95))
+    # Tent.
+    tx = x + w * 0.30
+    d.polygon([(tx, y + h * 0.78), (tx + w * 0.20, y + h * 0.38),
+               (tx + w * 0.40, y + h * 0.78)], fill=(200, 190, 160),
+              outline=(120, 100, 70), width=2)
+    d.polygon([(tx + w * 0.16, y + h * 0.78), (tx + w * 0.20, y + h * 0.56),
+               (tx + w * 0.24, y + h * 0.78)], fill=(90, 70, 50))
+    # Scrub dots.
+    for (sx, sy) in [(0.12, 0.72), (0.78, 0.70), (0.88, 0.82), (0.06, 0.86)]:
+        d.ellipse([x + w * sx - 3, y + h * sy - 3, x + w * sx + 3,
+                   y + h * sy + 3], fill=(140, 130, 60))
+
+
+def ill_gaza(d, x, y, w, h):
+    d.rectangle([x, y, x + w, y + h], fill=(235, 225, 200))
+    d.rectangle([x, y + h * 0.80, x + w, y + h], fill=(180, 170, 150))
+    # Rubble blocks.
+    d.polygon([(x + w * 0.06, y + h * 0.80), (x + w * 0.16, y + h * 0.62),
+               (x + w * 0.28, y + h * 0.80)], fill=(150, 140, 120))
+    d.polygon([(x + w * 0.78, y + h * 0.80), (x + w * 0.88, y + h * 0.66),
+               (x + w * 0.97, y + h * 0.80)], fill=(150, 140, 120))
+    # Marchers: heads + shoulders.
+    for i, fx in enumerate((0.30, 0.46, 0.62)):
+        cx = x + w * fx
+        cy = y + h * 0.48
+        d.ellipse([cx - 8, cy - 8, cx + 8, cy + 8], fill=(90, 70, 55))
+        d.polygon([(cx - 12, y + h * 0.80), (cx - 10, cy + 8),
+                   (cx + 10, cy + 8), (cx + 12, y + h * 0.80)],
+                  fill=((60, 90, 140) if i % 2 == 0 else (140, 60, 60)))
+    # Placards.
+    d.rectangle([x + w * 0.36, y + h * 0.16, x + w * 0.58, y + h * 0.34],
+                fill=(255, 255, 255), outline=INK, width=2)
+    d.line([x + w * 0.47, y + h * 0.34, x + w * 0.47, y + h * 0.48],
+           fill=INK, width=2)
+    d.line([x + w * 0.40, y + h * 0.22, x + w * 0.54, y + h * 0.22],
+           fill=RED, width=3)
+    d.line([x + w * 0.40, y + h * 0.28, x + w * 0.51, y + h * 0.28],
+           fill=INK, width=2)
+
+
+def ill_nigeria(d, x, y, w, h):
+    d.rectangle([x, y, x + w, y + h], fill=(225, 245, 225))
+    # Sun.
+    d.ellipse([x + w * 0.74, y + h * 0.08, x + w * 0.74 + 22,
+               y + h * 0.08 + 22], fill=(255, 200, 60))
+    # Ballot box: green / white / green.
+    bx, by = x + w * 0.24, y + h * 0.38
+    bw, bh = w * 0.52, h * 0.44
+    d.rectangle([bx, by, bx + bw, by + bh], fill=(255, 255, 255),
+                outline=INK, width=2)
+    d.rectangle([bx, by, bx + bw * 0.28, by + bh], fill=(0, 135, 60))
+    d.rectangle([bx + bw * 0.72, by, bx + bw, by + bh], fill=(0, 135, 60))
+    d.rectangle([bx + bw * 0.28, by - 4, bx + bw * 0.72, by + 2], fill=INK)
+    # Ballot paper going in.
+    d.polygon([(bx + bw * 0.42, by - h * 0.22), (bx + bw * 0.62, by - h * 0.22),
+               (bx + bw * 0.58, by - 2), (bx + bw * 0.46, by - 2)],
+              fill=(255, 255, 255), outline=INK, width=1)
+    # Green check on the box.
+    cx, cy = bx + bw * 0.5, by + bh * 0.55
+    d.line([cx - 10, cy, cx - 3, cy + 8], fill=(0, 135, 60), width=4)
+    d.line([cx - 3, cy + 8, cx + 12, cy - 10], fill=(0, 135, 60), width=4)
+
+
+def ill_taiwan(d, x, y, w, h):
+    d.rectangle([x, y, x + w, y + h], fill=(25, 25, 45))
+    # Spotlight cone.
+    d.polygon([(x + w * 0.42, y), (x + w * 0.58, y),
+               (x + w * 0.78, y + h), (x + w * 0.22, y + h)],
+              fill=(255, 250, 200))
+    d.polygon([(x + w * 0.46, y), (x + w * 0.54, y),
+               (x + w * 0.66, y + h), (x + w * 0.34, y + h)],
+              fill=(255, 255, 230))
+    # Stage floor.
+    d.rectangle([x, y + h * 0.82, x + w, y + h], fill=(60, 30, 30))
+    # Microphone on a stand.
+    mx = x + w * 0.5
+    d.rectangle([mx - 2, y + h * 0.42, mx + 2, y + h * 0.82], fill=(30, 30, 30))
+    d.ellipse([mx - 9, y + h * 0.26, mx + 9, y + h * 0.44], fill=(180, 180, 180),
+              outline=(60, 60, 60), width=2)
+    d.line([mx - 9, y + h * 0.82, mx - 18, y + h * 0.94], fill=(30, 30, 30),
+           width=3)
+    d.line([mx + 9, y + h * 0.82, mx + 18, y + h * 0.94], fill=(30, 30, 30),
+           width=3)
+    # Laugh lines around the mic.
+    d.line([mx - 22, y + h * 0.30, mx - 16, y + h * 0.34], fill=(255, 220, 60),
+           width=2)
+    d.line([mx + 16, y + h * 0.34, mx + 22, y + h * 0.30], fill=(255, 220, 60),
+           width=2)
+
+
+def ill_zelenskyy(d, x, y, w, h):
+    # Ukraine flag bands as the backdrop.
+    d.rectangle([x, y, x + w, y + h * 0.50], fill=(0, 90, 170))
+    d.rectangle([x, y + h * 0.50, x + w, y + h], fill=(255, 215, 0))
+    # Lectern.
+    cx = x + w * 0.5
+    d.polygon([(cx - w * 0.22, y + h * 0.92), (cx - w * 0.12, y + h * 0.52),
+               (cx + w * 0.12, y + h * 0.52), (cx + w * 0.22, y + h * 0.92)],
+              fill=(60, 60, 70))
+    d.rectangle([cx - w * 0.26, y + h * 0.46, cx + w * 0.26, y + h * 0.54],
+                fill=(40, 40, 50))
+    # Two microphones.
+    for mx in (cx - 12, cx + 12):
+        d.line([mx, y + h * 0.46, mx, y + h * 0.30], fill=(30, 30, 30),
+               width=2)
+        d.ellipse([mx - 5, y + h * 0.22, mx + 5, y + h * 0.32],
+                  fill=(30, 30, 30))
+    # Document seal: circle + star on the lectern.
+    d.ellipse([cx - 10, y + h * 0.64, cx + 10, y + h * 0.84],
+              outline=(255, 255, 255), width=2)
+    d.line([cx, y + h * 0.68, cx, y + h * 0.80], fill=(255, 255, 255),
+           width=2)
+    d.line([cx - 6, y + h * 0.74, cx + 6, y + h * 0.74], fill=(255, 255, 255),
+           width=2)
+
+
 ILLUSTRATIONS = {
     "cop31": ill_cop31,
     "hormuz": ill_hormuz,
@@ -522,6 +739,14 @@ ILLUSTRATIONS = {
     "aukus": ill_aukus,
     "geneva": ill_geneva,
     "atp": ill_atp,
+    "vegas": ill_vegas,
+    "mourning": ill_mourning,
+    "bessent": ill_bessent,
+    "darfur": ill_darfur,
+    "gaza": ill_gaza,
+    "nigeria": ill_nigeria,
+    "taiwan": ill_taiwan,
+    "zelenskyy": ill_zelenskyy,
 }
 
 
