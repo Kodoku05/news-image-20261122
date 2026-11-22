@@ -7,7 +7,7 @@
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 //
 // Verified 22 Nov 2026: two runs of main.ts produce byte-identical
-// output matching entry.png (sha256 5cb44589...).
+// output matching entry.png (sha256 d04ffb16...).
 
 import { copyFileSync } from 'node:fs';
 import { join } from 'node:path';

@@ -5,6 +5,11 @@
 # robots, FinCEN, Fed, SoftBank, Saturday sport) — all replaced below
 # with stories verified as Sunday 22 Nov 2026 (UTC) from Reuters, AP,
 # BBC, Al Jazeera, NYT, Guardian, Cricbuzz, CoinGecko and UKMTO.
+# Micro-fix in a later session: F1 podium corrected (Norris 2nd, Piastri
+# 3rd, Antonelli 4th — RacingNews365/f1headline/OneRacing); the
+# Smith/Khawaja Sydney items turned out to be January 2023, replaced
+# with verified Wellington Test stories from Sunday 22 Nov 2026
+# (myKhel bulletin, IANS, ANI).
 # Written by hand in this session; no file was copied in.
 
 DAY_TITLE = "Sunday 22 November 2026"
@@ -15,14 +20,14 @@ SUBHEAD = [
     "COP31 draft drops fossil fuels",
     "Tanker burns off Khasab",
     "Verstappen wins Las Vegas GP",
-    "Smith\u2019s 30th ton passes Bradman",
+    "India pile up record 720/9",
 ]
 
 # (big number, small label)
 STATS = [
     ("3", "tankers hit off Khasab in ~15 hours"),
     ("0", "mentions of \u2018fossil fuels\u2019 in COP31\u2019s Sunday draft"),
-    ("30", "Test hundreds for Smith, passing Bradman"),
+    ("720/9", "India\u2019s record Test total in New Zealand"),
     ("$58,737", "Bitcoin, up 5.3% in 24 hours"),
     ("2", "days into overtime as COP31 hunts a deal"),
     ("3rd", "Las Vegas Grand Prix win for Verstappen"),
@@ -68,7 +73,7 @@ LEADS = [
         "place": "LAS VEGAS",
         "beat": "SPORT",
         "headline": "Verstappen wins Las Vegas Grand Prix",
-        "dek": "Third win on the Strip from pole; Antonelli second, Piastri third. "
+        "dek": "Third win on the Strip from pole; Norris second, Piastri third. "
                "(Reports)",
         "ill": "vegas",
     },
@@ -190,11 +195,11 @@ ALSO = [
     (29, "BEIJING", "China spies targeted AI chips, NYT reports"),
     (30, "DHAKA", "Deadly protests erupt over exiled Hasina"),
     (31, "DHAKA", "90 guard platoons sent to curb arson"),
-    (32, "SYDNEY", "Smith\u2019s 30th Test ton passes Bradman"),
-    (33, "SYDNEY", "Khawaja 172 not out as Australia pile on"),
-    (34, "SYDNEY", "Australia 394-3 at tea on day two at SCG"),
+    (32, "WELLINGTON", "India declare 720/9, record total in NZ"),
+    (33, "WELLINGTON", "Pant 128 completes SENA centuries set"),
+    (34, "WELLINGTON", "Bumrah strikes as NZ trail by 319 at tea"),
     (35, "LAS VEGAS", "Hadjar sets fastest lap in Las Vegas"),
-    (36, "LAS VEGAS", "Antonelli second, Piastri third in Vegas"),
+    (36, "LAS VEGAS", "Norris second, Piastri third in Vegas"),
     (37, "TURIN", "ATP doubles final at 15:00 CET"),
     (38, "BRIGHTON", "Brighton play on Sunday, chasing Arsenal"),
     (39, "JOHANNESBURG", "Mlambo-Ngcuka funeral on 28 Nov"),
@@ -247,6 +252,7 @@ PINS = [
     ("SYDNEY", 151.2, -33.9),
     ("KYIV", 30.5, 50.4),
     ("TURIN", 7.7, 45.1),
+    ("WELLINGTON", 174.8, -41.3),
 ]
 
 FOOTER_SOURCES = (
@@ -256,5 +262,5 @@ FOOTER_SOURCES = (
 FOOTER_MARKETS = "MARKETS (SUN LIVE): BTC $58,737 \u00b7 ETH $1,647 \u00b7 SOL $68.72"
 FOOTER_TRENDING = (
     "TRENDING NOW: COP31 \u00b7 HORMUZ \u00b7 VERSTAPPEN \u00b7 ATP FINALS \u00b7 "
-    "BITCOIN \u00b7 SMITH"
+    "BITCOIN \u00b7 PANT"
 )
