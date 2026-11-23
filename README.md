@@ -6,11 +6,13 @@
 
 The World Today — 22 November 2026: a program that sums up the world news
 of Sunday 22 November 2026 as a one-page newspaper front page (a 1024×1024
-PNG). Lead stories: COP31's final draft drops every mention of fossil fuels;
-a third tanker burns at anchor off Khasab as Hormuz attacks mount; Bahrain
-says an Iranian attack set an industrial site ablaze; Mexico captures
-'El Chapo Isidro'; and a M7.2 quake strikes deep under Maluku. 50 stories
-across 8 regions, every one dated 22 November 2026.
+PNG). Lead stories: COP31 collapses with no deal at all after the EU
+rejects a text that never names fossil fuels; Ukrainian sea drones sink
+the Russian corvette Merkury off Benghazi; and Max Verstappen wins the
+Las Vegas Grand Prix. 50 stories across 8 regions, every one dated
+22 November 2026 — including the Dymer apartment strike, the Cikande
+factory fire, the Democrats' 258-seat House majority, and Alcaraz's
+maiden ATP Finals title.
 
 ## Run it
 
@@ -29,7 +31,9 @@ illustrated stories, a 37-story "Also" column, a "Why the strait is
 burning" explainer, a dotted world map with story pins, and a date-check
 box listing the big stories deliberately left out because they belong to
 earlier days. The output is deterministic — two runs produce byte-identical
-PNGs.
+PNGs. The v3 refresh (23 Nov) re-audited every story against the full-day
+Reuters/AP/BBC round-ups and the leaderboard, and swapped in the big
+22 November stories the first version missed.
 
 ## Sources
 
